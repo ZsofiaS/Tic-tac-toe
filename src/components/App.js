@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import Board from './Board';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -13,6 +14,7 @@ function App() {
       <p>Styled components & React Hooks</p>
       <Button onClick={() => console.log('clicked!')}>Just a button</Button>
       <Button primary>A primary button</Button>
+      <Board />
     </Container>
   );
 }
