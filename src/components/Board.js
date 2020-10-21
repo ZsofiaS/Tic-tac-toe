@@ -29,11 +29,12 @@ const Board = (props) => {
         let id = Number(e.target.id);
         const newBoard = board.map((square, i) => {
             if (id === i) {
-                return 'X';
+                return props.current;
             }
                 return square;
             })
         setBoard(newBoard);
+        props.updateHandler();
     }
 
     const createBoard = board.map((current, i) => {

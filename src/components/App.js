@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from './Button';
-import Board from './Board';
+import Game from './Game';
+
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -15,7 +16,7 @@ function App() {
       <p>Styled components & React Hooks</p>
       <Button onClick={() => console.log('clicked!')}>Just a button</Button>
       <Button primary>A primary button</Button>
-      <Board />
+      <Game />
     </Container>
   );
 }
