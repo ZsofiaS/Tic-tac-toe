@@ -1,14 +1,19 @@
 import React from 'react';
 import Button from './Button';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  text-align: center;
+  padding: 1rem`
 
 function App() {
   return (
-    <div>
-      <h1>Hello</h1>
-      <h2>Start editing</h2>
-      <Button onClick={() => console.log('clicked!')}>I am a button</Button>
-      <Button primary>I am a primary button</Button>
-    </div>
+    <Container>
+      <h1>Tic-tac-toe</h1>
+      <p>Styled components & React Hooks</p>
+      <Button onClick={() => console.log('clicked!')}>Just a button</Button>
+      <Button primary>A primary button</Button>
+    </Container>
   );
 }
 
