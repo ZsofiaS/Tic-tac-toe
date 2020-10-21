@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
 import Board from './Board';
 import styled from 'styled-components';
@@ -8,6 +8,7 @@ const Container = styled.div`
   padding: 1rem`
 
 function App() {
+
   return (
     <Container>
       <h1>Tic-tac-toe</h1>

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+// import Square from './Square';
 
 const BoardContainer = styled.div`
     width: 630px;
@@ -20,18 +21,30 @@ const Square = styled.button`
     margin: 4px;
 `;
 
-const Board = () => {
+const Board = (props) => {
+
+    const [board, setBoard] = useState([null, null, null, null, null, null, null, null, null]);
+
+    const clickHandler = (e) => {
+        let id = Number(e.target.id);
+        const newBoard = board.map((square, i) => {
+            if (id === i) {
+                return 'X';
+            }
+                return square;
+            })
+        setBoard(newBoard);
+    }
+
+    const createBoard = board.map((current, i) => {
+            return (
+                <Square key={i} id={i} onClick={clickHandler}>{board[i]}</Square> 
+            )
+        })  
+
     return (
         <BoardContainer>
-            <Square value="1" onClick={(e) => console.log(e.target.value)}></Square>
-            <Square value="2" onClick={(e) => console.log(e.target.value)}></Square>
-            <Square value="3" onClick={(e) => console.log(e.target.value)}></Square>
-            <Square value="4" onClick={(e) => console.log(e.target.value)}></Square>
-            <Square value="5" onClick={(e) => console.log(e.target.value)}></Square>
-            <Square value="6" onClick={(e) => console.log(e.target.value)}></Square>
-            <Square value="7" onClick={(e) => console.log(e.target.value)}></Square>
-            <Square value="8" onClick={(e) => console.log(e.target.value)}></Square>
-            <Square value="9" onClick={(e) => console.log(e.target.value)}></Square>
+            {createBoard}
         </BoardContainer>
     )
 }
