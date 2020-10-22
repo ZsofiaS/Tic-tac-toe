@@ -29,6 +29,14 @@ describe('renders Square component', () => {
   it('renders without crashing', () => {
     shallow(<Square />);
   });
+  it('should call onClick function when square clicked', () => {
+    const mockedHandler = jest.fn();
+    const clickHandler = mockedHandler;
+    const square = shallow(<Square onClick={clickHandler} />);
+    expect(mockedHandler).not.toHaveBeenCalled();
+    square.simulate('click');
+    expect(mockedHandler).toHaveBeenCalled();
+  });
   it('renders Square correctly', () => {
     const squareComponent = shallow(<Square />);
     expect(toJson(squareComponent)).toMatchSnapshot();
