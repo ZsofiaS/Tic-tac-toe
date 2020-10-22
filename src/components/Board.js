@@ -23,7 +23,7 @@ export const Square = styled.button`
   margin: 4px;
 `;
 
-export const Board = (props) => {
+export const Board = ({ current, updateHandler, declareWinner }) => {
   const [board, setBoard] = useState([
     null,
     null,
@@ -35,6 +35,8 @@ export const Board = (props) => {
     null,
     null,
   ]);
+
+  const [end, setEnd] = useState(false);
 
   const combos = [
     [0, 1, 2],
@@ -48,9 +50,12 @@ export const Board = (props) => {
   const checkWinner = () => {
     for (let i = 0; i < combos.length; i++) {
       if (
-        board[combos[i][0]] === 'X' &&
-        board[combos[i][1]] === 'X' &&
-        board[combos[i][2]] === 'X'
+        (board[combos[i][0]] === 'X' &&
+          board[combos[i][1]] === 'X' &&
+          board[combos[i][2]] === 'X') ||
+        (board[combos[i][0]] === 'O' &&
+          board[combos[i][1]] === 'O' &&
+          board[combos[i][2]] === 'O')
       ) {
         finishGame();
         return;
@@ -60,21 +65,25 @@ export const Board = (props) => {
 
   const finishGame = () => {
     console.log('finished');
+    setEnd(true);
+    declareWinner();
   };
 
   const clickHandler = async (e) => {
-    const id = Number(e.target.id);
-    const newBoard = board.map((square, i) => {
-      if (id === i) {
-        return props.current;
-      }
-      return square;
-    });
-    setBoard(newBoard);
-    props.updateHandler();
+    if (!end) {
+      const id = Number(e.target.id);
+      const newBoard = board.map((square, i) => {
+        if (id === i) {
+          return current;
+        }
+        return square;
+      });
+      setBoard(newBoard);
+      updateHandler();
+    }
   };
 
-  const createBoard = board.map((current, i) => (
+  const createBoard = board.map((item, i) => (
     <Square key={i} id={i} onClick={clickHandler}>
       {board[i]}
     </Square>
@@ -86,7 +95,7 @@ export const Board = (props) => {
 
   useEffect(() => {
     checkWinner();
-  }, [board]);
+  });
 
   return (
     <>
@@ -99,4 +108,5 @@ export const Board = (props) => {
 Board.propTypes = {
   current: PropTypes.string,
   updateHandler: PropTypes.func,
+  declareWinner: PropTypes.func,
 };
