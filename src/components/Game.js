@@ -14,9 +14,9 @@ const Game = () => {
   };
 
   const restartGame = () => {
-      setWinner('');
-      setCurrentPlayer('X');
-  }
+    setWinner('');
+    setCurrentPlayer('X');
+  };
 
   return (
     <>

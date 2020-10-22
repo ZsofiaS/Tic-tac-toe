@@ -64,7 +64,6 @@ export const Board = ({ current, updateHandler, declareWinner, restart }) => {
   };
 
   const finishGame = () => {
-    console.log('finished');
     setEnd(true);
     declareWinner();
   };
@@ -111,5 +110,5 @@ Board.propTypes = {
   current: PropTypes.string,
   updateHandler: PropTypes.func,
   declareWinner: PropTypes.func,
-  restart: PropTypes.func
+  restart: PropTypes.func,
 };
