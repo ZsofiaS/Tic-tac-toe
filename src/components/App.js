@@ -1,15 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import Button from './Button';
 import Game from './Game';
 
-import styled from 'styled-components';
-
 const Container = styled.div`
   text-align: center;
-  padding: 1rem`
+  padding: 1rem;
+`;
 
 function App() {
-
   return (
     <Container>
       <h1>Tic-tac-toe</h1>

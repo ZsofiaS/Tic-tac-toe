@@ -12,7 +12,7 @@ const Button = styled.button`
 
   // import css from styled components & interpolate a function into the template literal
   // the function gets passed the props of our component
-  ${props =>
+  ${(props) =>
     props.primary &&
     css`
       color: crimson;
