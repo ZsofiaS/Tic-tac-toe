@@ -7,4 +7,8 @@ describe('renders Button component', () => {
   it('renders without crashing', () => {
     shallow(<Button />);
   });
+  it('renders Button correctly', () => {
+    const buttonComponent = shallow(<Button />);
+    expect(toJson(buttonComponent)).toMatchSnapshot();
+  });
 });

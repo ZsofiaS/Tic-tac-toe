@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Game component renders Game correctly 1`] = `
+<Fragment>
+  <p>
+    Player: 
+    X
+  </p>
+  <Board
+    current="X"
+    declareWinner={[Function]}
+    restart={[Function]}
+    updateHandler={[Function]}
+  />
+</Fragment>
+`;

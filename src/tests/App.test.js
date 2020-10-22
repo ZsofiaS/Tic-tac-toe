@@ -7,4 +7,8 @@ describe('renders App component', () => {
   it('renders without crashing', () => {
     shallow(<App />);
   });
+  it('renders App correctly', () => {
+    const appComponent = shallow(<App />);
+    expect(toJson(appComponent)).toMatchSnapshot();
+  });
 });
