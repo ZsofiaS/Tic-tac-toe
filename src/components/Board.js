@@ -23,7 +23,7 @@ export const Square = styled.button`
   margin: 4px;
 `;
 
-export const Board = ({ current, updateHandler, declareWinner }) => {
+export const Board = ({ current, updateHandler, declareWinner, restart }) => {
   const [board, setBoard] = useState([
     null,
     null,
@@ -40,7 +40,7 @@ export const Board = ({ current, updateHandler, declareWinner }) => {
 
   const combos = [
     [0, 1, 2],
-    [1, 3, 6],
+    [0, 3, 6],
     [2, 5, 8],
     [6, 7, 8],
     [0, 4, 8],
@@ -91,6 +91,8 @@ export const Board = ({ current, updateHandler, declareWinner }) => {
 
   const restartGame = () => {
     setBoard(Array(9).fill(null));
+    setEnd(false);
+    restart();
   };
 
   useEffect(() => {
@@ -109,4 +111,5 @@ Board.propTypes = {
   current: PropTypes.string,
   updateHandler: PropTypes.func,
   declareWinner: PropTypes.func,
+  restart: PropTypes.func
 };

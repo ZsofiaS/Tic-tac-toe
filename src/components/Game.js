@@ -9,9 +9,14 @@ const Game = () => {
     currentPlayer === 'X' ? setCurrentPlayer('O') : setCurrentPlayer('X');
   };
 
-  const declareWinner = async () => {
+  const declareWinner = () => {
     currentPlayer === 'X' ? setWinner('O') : setWinner('X');
   };
+
+  const restartGame = () => {
+      setWinner('');
+      setCurrentPlayer('X');
+  }
 
   return (
     <>
@@ -20,6 +25,7 @@ const Game = () => {
         current={currentPlayer}
         updateHandler={updatePlayer}
         declareWinner={declareWinner}
+        restart={restartGame}
       />
     </>
   );
