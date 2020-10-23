@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Game from './Game';
+import GlobalStyle from '../globalStyles';
 
 const Container = styled.div`
   text-align: center;
@@ -9,11 +10,15 @@ const Container = styled.div`
 
 function App() {
   return (
-    <Container>
-      <h1>Tic-tac-toe</h1>
-      <p>With styled components & React Hooks</p>
-      <Game />
-    </Container>
+    <>
+      <GlobalStyle />
+      <Container>
+        <h1>Tic-tac-toe</h1>
+        <Game />
+        <p>Styled components & React Hooks</p>
+        <p>Made with 💕 by Zsofi</p>
+      </Container>
+    </>
   );
 }
 

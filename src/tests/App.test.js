@@ -18,7 +18,7 @@ describe('renders App component', () => {
     expect(appComponent.find('h1')).toHaveLength(1);
   });
   it('should render a p element', () => {
-    expect(appComponent.find('p')).toHaveLength(1);
+    expect(appComponent.find('p')).toHaveLength(2);
   });
   it('should render a Game component', () => {
     expect(appComponent.find(Game)).toHaveLength(1);

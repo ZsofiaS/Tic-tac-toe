@@ -9,6 +9,7 @@ const Button = styled.button`
   margin: 0 1em;
   padding: 0.25em 1em;
   transition: 0.5s all ease-out;
+  font-family: 'Grandstander', cursive;
 
   // import css from styled components & interpolate a function into the template literal
   // the function gets passed the props of our component

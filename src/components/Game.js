@@ -20,7 +20,7 @@ const Game = () => {
 
   return (
     <>
-      {winner !== '' ? <p>Winner: {winner}</p> : <p>Player: {currentPlayer}</p>}
+      {winner !== '' ? <p>{winner} wins!</p> : <p>{currentPlayer}'s turn</p>}
       <Board
         current={currentPlayer}
         updateHandler={updatePlayer}
