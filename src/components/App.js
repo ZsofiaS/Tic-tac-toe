@@ -16,7 +16,13 @@ function App() {
         <h1>Tic-tac-toe</h1>
         <Game />
         <p>Styled components & React Hooks</p>
-        <p>Made with 💕 by Zsofi</p>
+        <p>
+          Made with{' '}
+          <span role="img" aria-label="Love">
+            💕
+          </span>{' '}
+          by Zsofi
+        </p>
       </Container>
     </>
   );
