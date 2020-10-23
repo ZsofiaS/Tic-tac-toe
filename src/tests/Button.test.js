@@ -7,7 +7,6 @@ describe('renders Button component', () => {
   it('renders without crashing', () => {
     shallow(<Button />);
   });
-
   it('should call onClick function when button clicked', () => {
     const mockedRestartGame = jest.fn();
     const restartGame = mockedRestartGame;
@@ -16,7 +15,6 @@ describe('renders Button component', () => {
     button.simulate('click');
     expect(mockedRestartGame).toHaveBeenCalled();
   });
-
   it('renders Button correctly', () => {
     const buttonComponent = shallow(<Button />);
     expect(toJson(buttonComponent)).toMatchSnapshot();
