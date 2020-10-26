@@ -8,6 +8,7 @@ exports[`renders Game component renders Game correctly 1`] = `
   </styled.p>
   <Board
     current="X"
+    declareTie={[Function]}
     declareWinner={[Function]}
     restart={[Function]}
     updateHandler={[Function]}

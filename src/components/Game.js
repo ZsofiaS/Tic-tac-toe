@@ -18,6 +18,10 @@ const Game = () => {
     currentPlayer === 'X' ? setWinner('O') : setWinner('X');
   };
 
+  const declareTie = () => {
+    setWinner('No one');
+  };
+
   const restartGame = () => {
     setWinner('');
     setCurrentPlayer('X');
@@ -34,6 +38,7 @@ const Game = () => {
         current={currentPlayer}
         updateHandler={updatePlayer}
         declareWinner={declareWinner}
+        declareTie={declareTie}
         restart={restartGame}
       />
     </>

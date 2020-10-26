@@ -37,7 +37,13 @@ export const Square = styled.button`
   }
 `;
 
-export const Board = ({ current, updateHandler, declareWinner, restart }) => {
+export const Board = ({
+  current,
+  updateHandler,
+  declareWinner,
+  restart,
+  declareTie,
+}) => {
   const [board, setBoard] = useState([
     null,
     null,
@@ -79,6 +85,13 @@ export const Board = ({ current, updateHandler, declareWinner, restart }) => {
     }
   };
 
+  const checkEndofgame = () => {
+    if (!board.includes(null)) {
+      setEnd(true);
+      declareTie();
+    }
+  };
+
   const finishGame = () => {
     setEnd(true);
     declareWinner();
@@ -93,7 +106,6 @@ export const Board = ({ current, updateHandler, declareWinner, restart }) => {
         }
         return square;
       });
-      console.log(e.target);
       setBoard(newBoard);
       updateHandler();
     }
@@ -113,6 +125,8 @@ export const Board = ({ current, updateHandler, declareWinner, restart }) => {
 
   useEffect(() => {
     checkWinner();
+    checkEndofgame();
+    console.log(end);
   });
 
   return (
@@ -128,4 +142,5 @@ Board.propTypes = {
   updateHandler: PropTypes.func,
   declareWinner: PropTypes.func,
   restart: PropTypes.func,
+  declareTie: PropTypes.func,
 };
