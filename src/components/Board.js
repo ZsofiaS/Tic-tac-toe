@@ -25,8 +25,13 @@ export const Square = styled.button`
   font-family: 'Grandstander', cursive;
   &:hover {
     background-color: ${(props) =>
-      props.id === 1 ? 'rgb(239, 239, 239)' : 'palevioletred'};
-    cursor: pointer;
+      props.board === 'X' || props.board === 'O' || props.ended === true
+        ? 'rgb(239, 239, 239)'
+        : 'gainsboro'};
+    cursor: ${(props) =>
+      props.board === 'X' || props.board === 'O' || props.ended === true
+        ? ''
+        : 'pointer'};
   }
 `;
 
@@ -86,14 +91,14 @@ export const Board = ({ current, updateHandler, declareWinner, restart }) => {
         }
         return square;
       });
-      console.log(id);
+      console.log(e.target);
       setBoard(newBoard);
       updateHandler();
     }
   };
 
   const createBoard = board.map((item, i) => (
-    <Square key={i} id={i} onClick={clickHandler} board={item}>
+    <Square key={i} id={i} onClick={clickHandler} board={item} ended={end}>
       {board[i]}
     </Square>
   ));
