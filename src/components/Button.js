@@ -4,10 +4,10 @@ const Button = styled.button`
   cursor: pointer;
   background: transparent;
   border-radius: 3px;
-  color: palevioletred;
-  border: 2px solid palevioletred;
+  color: crimson;
+  border: 2px solid crimson;
   margin: 0 1em;
-  padding: 0.25em 1em;
+  padding: 0.5em 1em;
   transition: 0.5s all ease-out;
   font-family: 'Grandstander', cursive;
 

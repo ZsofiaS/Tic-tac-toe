@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 // import Square from './Square';
 import PropTypes from 'prop-types';
 import Button from './Button';
@@ -24,14 +24,16 @@ export const Square = styled.button`
   font-size: 50px;
   font-family: 'Grandstander', cursive;
   &:hover {
-    background-color: ${(props) =>
+    ${(props) =>
       props.board === 'X' || props.board === 'O' || props.ended === true
-        ? 'rgb(239, 239, 239)'
-        : 'gainsboro'};
-    cursor: ${(props) =>
-      props.board === 'X' || props.board === 'O' || props.ended === true
-        ? ''
-        : 'pointer'};
+        ? css`
+            background-color: rgb(239, 239, 239);
+            cursor: auto;
+          `
+        : css`
+            background-color: gainsboro;
+            cursor: pointer;
+          `};
   }
 `;
 

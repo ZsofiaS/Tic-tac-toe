@@ -2,10 +2,10 @@
 
 exports[`renders Game component renders Game correctly 1`] = `
 <Fragment>
-  <p>
+  <styled.p>
     X
     's turn
-  </p>
+  </styled.p>
   <Board
     current="X"
     declareWinner={[Function]}

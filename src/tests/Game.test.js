@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Game from '../components/Game';
+import Game, { ResultTitle } from '../components/Game';
 import { Board } from '../components/Board';
 
 let gameComponent;
@@ -15,7 +15,7 @@ describe('renders Game component', () => {
     shallow(<Game />);
   });
   it('should render a p element', () => {
-    expect(gameComponent.find('p')).toHaveLength(1);
+    expect(gameComponent.find(ResultTitle)).toHaveLength(1);
   });
   it('should render a board component', () => {
     expect(gameComponent.find(Board)).toHaveLength(1);

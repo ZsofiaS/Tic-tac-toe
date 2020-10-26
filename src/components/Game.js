@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import { Board } from './Board';
+
+export const ResultTitle = styled.p`
+  font-size: 40px;
+`;
 
 const Game = () => {
   const [currentPlayer, setCurrentPlayer] = useState('X');
@@ -20,7 +25,11 @@ const Game = () => {
 
   return (
     <>
-      {winner !== '' ? <p>{winner} wins!</p> : <p>{currentPlayer}'s turn</p>}
+      {winner !== '' ? (
+        <ResultTitle>{winner} wins!</ResultTitle>
+      ) : (
+        <ResultTitle>{currentPlayer}'s turn</ResultTitle>
+      )}
       <Board
         current={currentPlayer}
         updateHandler={updatePlayer}
