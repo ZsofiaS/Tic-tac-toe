@@ -4,8 +4,10 @@ const Button = styled.button`
   cursor: pointer;
   background: transparent;
   border-radius: 3px;
-  color: crimson;
-  border: 2px solid crimson;
+  color: black;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #118ab2, #06d6a0, #ffd166);
   margin: 0 1em;
   padding: 0.5em 1em;
   transition: 0.5s all ease-out;
@@ -21,8 +23,12 @@ const Button = styled.button`
     `};
 
   &:hover {
-    background-color: ${(props) =>
-      props.primary ? 'crimson' : 'palevioletred'};
+    background-image: linear-gradient(
+      to left,
+      #118ab2 0%,
+      #06d6a0 37%,
+      #ffd166 100%
+    );
     color: white;
   }
 `;

@@ -4,9 +4,9 @@ exports[`renders App component renders App correctly 1`] = `
 <Fragment>
   <Memo(l) />
   <styled.div>
-    <h1>
-      Tic-tac-toe
-    </h1>
+    <styled.h1>
+      TIC-TAC-TOE
+    </styled.h1>
     <Game />
     <p>
       Styled components & React Hooks
