@@ -23,6 +23,24 @@ export const Square = styled.button`
   margin: 5px;
   font-size: 50px;
   font-family: 'Grandstander', cursive;
+  border-radius: 5px;
+  background-color: #118ab2;
+
+  ${(props) =>
+    props.board === 'X' || props.board === 'O'
+      ? css`
+          background-image: linear-gradient(
+            319deg,
+            #118ab2 0%,
+            #06d6a0 37%,
+            #ffd166 100%
+          );
+        `
+      : css`
+          background-color: #efefef;
+          color: blue;
+        `};
+
   &:hover {
     ${(props) =>
       props.board === 'X' || props.board === 'O' || props.ended === true
@@ -131,7 +149,9 @@ export const Board = ({
 
   return (
     <>
-      <Button onClick={restartGame}>Start again</Button>
+      <Button type="button" onClick={restartGame}>
+        Start again
+      </Button>
       <BoardContainer>{createBoard}</BoardContainer>
     </>
   );

@@ -4,6 +4,7 @@ exports[`renders Board component renders Board correctly 1`] = `
 <Fragment>
   <styled.button
     onClick={[Function]}
+    type="button"
   >
     Start again
   </styled.button>
@@ -77,6 +78,6 @@ exports[`renders Board component renders Board correctly 1`] = `
 
 exports[`renders Square component renders Square correctly 1`] = `
 <button
-  className="sc-dlnjPT gucKdw"
+  className="sc-dlnjPT edBKXp"
 />
 `;
