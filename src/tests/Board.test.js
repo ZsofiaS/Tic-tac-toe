@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { Board, Square } from '../components/Board';
+import { Board, Square, BoardContainer } from '../components/Board';
 import Button from '../components/Button';
 
 let boardComponent;
@@ -16,6 +16,9 @@ describe('renders Board component', () => {
   });
   it('should render 9 squares', () => {
     expect(boardComponent.find(Square)).toHaveLength(9);
+  });
+  it('should render 1 boardContainer', () => {
+    expect(boardComponent.find(BoardContainer)).toHaveLength(9);
   });
   it('should render 1 button', () => {
     expect(boardComponent.find(Button)).toHaveLength(1);

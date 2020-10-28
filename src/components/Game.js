@@ -4,6 +4,13 @@ import { Board } from './Board';
 
 export const ResultTitle = styled.p`
   font-size: 40px;
+  margin: 0.2rem;
+`;
+export const WinnerName = styled.span`
+  background: -webkit-linear-gradient(319deg, #118ab2, #06d6a0, #ffd166);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 55px;
 `;
 
 const Game = () => {
@@ -30,9 +37,13 @@ const Game = () => {
   return (
     <>
       {winner !== '' ? (
-        <ResultTitle>{winner} wins!</ResultTitle>
+        <ResultTitle>
+          <WinnerName>{winner}</WinnerName> wins!
+        </ResultTitle>
       ) : (
-        <ResultTitle>{currentPlayer}'s turn</ResultTitle>
+        <ResultTitle>
+          <WinnerName>{currentPlayer}</WinnerName>'s turn
+        </ResultTitle>
       )}
       <Board
         current={currentPlayer}

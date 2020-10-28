@@ -4,12 +4,12 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-const BoardContainer = styled.div`
+export const BoardContainer = styled.div`
   width: 390px;
   height: 390px;
   padding: 1rem;
   border: 1px solid gainsboro;
-  margin: 2rem auto;
+  margin: 0.8rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +25,7 @@ export const Square = styled.button`
   font-family: 'Grandstander', cursive;
   border-radius: 5px;
   background-color: #118ab2;
+  transition: 0.3s all ease-out;
 
   ${(props) =>
     props.board === 'X' || props.board === 'O'
@@ -149,10 +150,10 @@ export const Board = ({
 
   return (
     <>
+      <BoardContainer>{createBoard}</BoardContainer>
       <Button type="button" onClick={restartGame}>
         Start again
       </Button>
-      <BoardContainer>{createBoard}</BoardContainer>
     </>
   );
 };

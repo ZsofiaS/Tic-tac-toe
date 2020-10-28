@@ -3,7 +3,9 @@
 exports[`renders Game component renders Game correctly 1`] = `
 <Fragment>
   <styled.p>
-    X
+    <styled.span>
+      X
+    </styled.span>
     's turn
   </styled.p>
   <Board

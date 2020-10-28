@@ -8,21 +8,23 @@ exports[`renders App component renders App correctly 1`] = `
       TIC-TAC-TOE
     </styled.h1>
     <Game />
-    <p>
-      Styled components & React Hooks
-    </p>
-    <p>
-      Made with
-       
-      <span
-        aria-label="Love"
-        role="img"
-      >
-        💕
-      </span>
-       
-      by Zsofi
-    </p>
+    <styled.div>
+      <p>
+        Styled components & React Hooks
+      </p>
+      <p>
+        Made with
+         
+        <span
+          aria-label="Love"
+          role="img"
+        >
+          💕
+        </span>
+         
+        by Zsofi
+      </p>
+    </styled.div>
   </styled.div>
 </Fragment>
 `;

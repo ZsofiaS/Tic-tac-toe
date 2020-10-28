@@ -2,12 +2,6 @@
 
 exports[`renders Board component renders Board correctly 1`] = `
 <Fragment>
-  <styled.button
-    onClick={[Function]}
-    type="button"
-  >
-    Start again
-  </styled.button>
   <styled.div>
     <styled.button
       board={null}
@@ -73,11 +67,17 @@ exports[`renders Board component renders Board correctly 1`] = `
       onClick={[Function]}
     />
   </styled.div>
+  <styled.button
+    onClick={[Function]}
+    type="button"
+  >
+    Start again
+  </styled.button>
 </Fragment>
 `;
 
 exports[`renders Square component renders Square correctly 1`] = `
 <button
-  className="sc-dlnjPT edBKXp"
+  className="sc-dlnjPT gdekQH"
 />
 `;
