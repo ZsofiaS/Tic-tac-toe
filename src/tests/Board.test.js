@@ -18,7 +18,7 @@ describe('renders Board component', () => {
     expect(boardComponent.find(Square)).toHaveLength(9);
   });
   it('should render 1 boardContainer', () => {
-    expect(boardComponent.find(BoardContainer)).toHaveLength(9);
+    expect(boardComponent.find(BoardContainer)).toHaveLength(1);
   });
   it('should render 1 button', () => {
     expect(boardComponent.find(Button)).toHaveLength(1);
