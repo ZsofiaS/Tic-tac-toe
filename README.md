@@ -1,5 +1,5 @@
 # Tic-tac-toe
-A classic game - a little project to learn Styled Components, practice React Hooks and testing.🌺
+A classic game - a little project to learn about Styled Components, practice React Hooks and testing.
 
 ![main](./public/screen3.png)
 
