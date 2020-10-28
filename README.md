@@ -1,7 +1,7 @@
 # Tic-tac-toe
 A classic game - a little project to learn Styled Components, practice React Hooks and testing.🌺
 
-![main](./public/screen3.png)!
+![main](./public/screen3.png)
 
 ### Tech stack
 * React Hooks
