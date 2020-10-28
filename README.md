@@ -8,6 +8,7 @@ A classic game - a little project to learn Styled Components, practice React Hoo
 * Styled Components
 * Jest
 * Enzyme
+* Travis CI
 
 ### How to use locally:
 
