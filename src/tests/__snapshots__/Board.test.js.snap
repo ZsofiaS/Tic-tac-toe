@@ -78,6 +78,6 @@ exports[`renders Board component renders Board correctly 1`] = `
 
 exports[`renders Square component renders Square correctly 1`] = `
 <button
-  className="sc-dlnjPT gdekQH"
+  className="sc-dlnjPT egLKYB"
 />
 `;

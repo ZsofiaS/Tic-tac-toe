@@ -1,13 +1,14 @@
 # Tic-tac-toe
 A classic game - a little project to learn about Styled Components, practice React Hooks and testing.
 
-![main](./public/screen3.png)
+![main](./public/screen.png)
 
 ### Tech stack
 * React Hooks
 * Styled Components
 * Jest
 * Enzyme
+* ESLint
 * Travis CI
 
 ### How to use locally:

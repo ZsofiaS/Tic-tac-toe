@@ -21,7 +21,7 @@ export const Square = styled.button`
   height: 120px;
   border: none;
   margin: 5px;
-  font-size: 50px;
+  font-size: 70px;
   font-family: 'Grandstander', cursive;
   border-radius: 5px;
   background-color: #118ab2;
@@ -39,7 +39,6 @@ export const Square = styled.button`
         `
       : css`
           background-color: #efefef;
-          color: blue;
         `};
 
   &:hover {
