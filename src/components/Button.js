@@ -3,11 +3,11 @@ import styled, { css } from 'styled-components';
 const Button = styled.button`
   cursor: pointer;
   background: transparent;
+  background-image: none;
   color: black;
-  background-image: linear-gradient(to left, #118ab2, #06d6a0, #ffd166);
   margin: 0 1em;
   padding: 0.6em 0.9em;
-  transition: 0.3s all ease-out;
+  transition: 1s background-image ease-out;
   font-family: 'Grandstander', cursive;
   font-size: 18px;
   border-radius: 3px;
@@ -24,6 +24,7 @@ const Button = styled.button`
 
   &:hover {
     background-image: linear-gradient(to left, #8adaf5, #82fcdc, #ffe099);
+    background-image: linear-gradient(to left, #118ab2, #06d6a0, #ffd166);
     color: black;
   }
 `;
